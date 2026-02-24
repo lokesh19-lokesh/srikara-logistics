@@ -27,7 +27,7 @@ const Section = ({ children, className, progressRange, opacityRange = [0, 1, 0] 
     return (
         <motion.div
             style={{ opacity, y }}
-            className={cn("absolute inset-0 flex flex-col justify-center px-10 md:px-24 pointer-events-none", className)}
+            className={cn("absolute inset-0 flex flex-col justify-center px-10 md:px-24 pointer-events-none drop-shadow-2xl", className)}
         >
             <div className="max-w-4xl pointer-events-auto">
                 {children}

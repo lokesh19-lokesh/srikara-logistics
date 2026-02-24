@@ -17,11 +17,11 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: "Overview", href: "#" },
-        { name: "Services", href: "#" },
-        { name: "Fleet", href: "#" },
-        { name: "Safety", href: "#" },
-        { name: "Contact", href: "#" },
+        { name: "Overview", href: "/" },
+        { name: "About", href: "/about" },
+        { name: "Services", href: "/services" },
+        { name: "Gallery", href: "/gallery" },
+        { name: "Contact", href: "/contact" },
     ];
 
     return (
@@ -37,10 +37,15 @@ const Navbar = () => {
                 {/* Left: Logo */}
                 <Link
                     href="/"
-                    className="text-white font-bold text-xl tracking-tighter flex items-center gap-2 group"
+                    className="flex items-center gap-2 group"
                 >
-                    <span className="bg-corporate w-2 h-8 block rounded-full group-hover:h-6 transition-all duration-300"></span>
-                    SRIKARA <span className="text-white/50 font-normal">LOGISTICS</span>
+                    <div className="relative h-10 w-40 overflow-hidden">
+                        <img
+                            src="/logo.jpg"
+                            alt="Srikara Logistics"
+                            className="h-full w-full object-contain filter brightness-110 contrast-110"
+                        />
+                    </div>
                 </Link>
 
                 {/* Center: Links */}
