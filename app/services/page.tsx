@@ -38,8 +38,8 @@ export default function Services() {
                             <div className="p-4 rounded-2xl bg-corporate/10 border border-corporate/20 text-corporate mb-8 group-hover:scale-110 transition-transform">
                                 <s.icon size={32} />
                             </div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 italic tracking-tight">{s.title}</h2>
-                            <p className="text-white/50 text-lg leading-relaxed max-w-lg">
+                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 italic tracking-tight drop-shadow-md">{s.title}</h2>
+                            <p className="text-white/80 text-lg leading-relaxed max-w-lg drop-shadow-sm">
                                 {s.description}
                             </p>
                         </div>

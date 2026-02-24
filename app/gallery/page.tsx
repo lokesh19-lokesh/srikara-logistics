@@ -12,16 +12,16 @@ export default function Gallery() {
                     {[1, 2, 3, 4, 5, 6].map((i) => (
                         <div key={i} className="aspect-[4/3] rounded-2xl bg-white/5 border border-white/10 overflow-hidden relative group cursor-pointer">
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="text-white/10 font-bold italic text-sm group-hover:text-corporate transition-colors">Operational Asset {i}</span>
+                                <span className="text-white/30 font-bold italic text-sm group-hover:text-corporate transition-colors drop-shadow-md">Operational Asset {i}</span>
                             </div>
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <div className="text-white text-xs font-bold tracking-widest uppercase">Hero Component 0{i}</div>
+                                <div className="text-white text-xs font-bold tracking-widest uppercase drop-shadow-lg">Hero Component 0{i}</div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-12 text-center text-white/20 text-sm font-medium">
+                <div className="mt-12 text-center text-white/40 text-sm font-medium drop-shadow-sm">
                     Displaying recent fleet highlights and command center operations.
                 </div>
             </section>

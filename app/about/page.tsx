@@ -21,10 +21,10 @@ export default function About() {
                             Driving the Future of <br />
                             <span className="text-corporate">Corporate Mobility.</span>
                         </h2>
-                        <p className="text-white/60 text-lg leading-relaxed mb-8">
+                        <p className="text-white/80 text-lg leading-relaxed mb-8 drop-shadow-sm">
                             Established in 2012, Srikara Logistics has grown to become a leader in the corporate transportation sector in Hyderabad. We understand that efficient mobility is the heartbeat of any thriving organization.
                         </p>
-                        <p className="text-white/60 text-lg leading-relaxed">
+                        <p className="text-white/80 text-lg leading-relaxed drop-shadow-sm">
                             Our mission is to provide seamless, safe, and scalable transport solutions that empower businesses to focus on what they do best, while we handle the logistics of moving their most valuable assets—their people.
                         </p>
                     </div>

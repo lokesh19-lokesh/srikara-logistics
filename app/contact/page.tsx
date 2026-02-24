@@ -22,8 +22,8 @@ export default function Contact() {
                                     <MapPin className="text-corporate" size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">Location</h3>
-                                    <p className="text-white/50 leading-relaxed">
+                                    <h3 className="text-white font-bold mb-2 drop-shadow-sm">Location</h3>
+                                    <p className="text-white/80 leading-relaxed drop-shadow-sm">
                                         Srikara Logistics, Madhapur, <br />
                                         Hyderabad, Telangana 500081
                                     </p>
@@ -35,9 +35,9 @@ export default function Contact() {
                                     <Phone className="text-corporate" size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">Connect</h3>
-                                    <p className="text-white/50">+91 40 1234 5678</p>
-                                    <p className="text-white/50">+91 99887 76655</p>
+                                    <h3 className="text-white font-bold mb-2 drop-shadow-sm">Connect</h3>
+                                    <p className="text-white/80 drop-shadow-sm">+91 40 1234 5678</p>
+                                    <p className="text-white/80 drop-shadow-sm">+91 99887 76655</p>
                                 </div>
                             </div>
 
@@ -46,9 +46,9 @@ export default function Contact() {
                                     <Mail className="text-corporate" size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">Inquiries</h3>
-                                    <p className="text-white/50">solutions@srikaralogistics.com</p>
-                                    <p className="text-white/50">partners@srikaralogistics.com</p>
+                                    <h3 className="text-white font-bold mb-2 drop-shadow-sm">Inquiries</h3>
+                                    <p className="text-white/80 drop-shadow-sm">solutions@srikaralogistics.com</p>
+                                    <p className="text-white/80 drop-shadow-sm">partners@srikaralogistics.com</p>
                                 </div>
                             </div>
                         </div>
