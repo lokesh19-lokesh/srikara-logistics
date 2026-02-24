@@ -27,9 +27,9 @@ const Section = ({ children, className, progressRange, opacityRange = [0, 1, 0] 
     return (
         <motion.div
             style={{ opacity, y }}
-            className={cn("absolute inset-0 flex flex-col justify-center px-10 md:px-24 pointer-events-none drop-shadow-2xl", className)}
+            className={cn("absolute inset-0 flex flex-col justify-center px-10 md:px-24 pointer-events-none", className)}
         >
-            <div className="max-w-4xl pointer-events-auto">
+            <div className="max-w-4xl pointer-events-auto filter drop-shadow-[0_10px_20px_rgba(0,0,0,1)]">
                 {children}
             </div>
         </motion.div>
@@ -38,7 +38,7 @@ const Section = ({ children, className, progressRange, opacityRange = [0, 1, 0] 
 
 const StoryOverlay = () => {
     return (
-        <div className="fixed inset-0 pointer-events-none z-20">
+        <div className="fixed inset-0 pointer-events-none z-40">
 
             {/* 1. HERO INTRO (0-15%) */}
             <Section progressRange={[0, 0.15]} className="items-center text-center">
@@ -53,7 +53,7 @@ const StoryOverlay = () => {
                 <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6">
                     SRIKARA <span className="text-white/20">LOGISTICS</span>
                 </h1>
-                <p className="text-white/60 text-lg md:text-xl max-w-xl mx-auto font-medium leading-relaxed">
+                <p className="text-white text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed drop-shadow-lg">
                     Corporate mobility solutions engineered for reliability, safety, and scale at any magnitude.
                 </p>
             </Section>
@@ -69,10 +69,10 @@ const StoryOverlay = () => {
                     <span className="text-white/30">from the inside out.</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
-                    <p className="text-white/60 text-lg leading-relaxed">
+                    <p className="text-white text-lg leading-relaxed font-semibold drop-shadow-md">
                         Every vehicle, driver, and route is part of a carefully engineered system designed for uninterrupted mobility.
                     </p>
-                    <p className="text-white/60 text-lg leading-relaxed">
+                    <p className="text-white text-lg leading-relaxed font-semibold drop-shadow-md">
                         From scheduling to precision maintenance, our operations ensure your workforce moves without friction.
                     </p>
                 </div>
@@ -137,7 +137,7 @@ const StoryOverlay = () => {
                     Reliable journeys. <br />
                     <span className="text-white/30">Trusted partnerships.</span>
                 </h2>
-                <p className="text-white/60 text-lg md:text-xl max-w-xl mx-auto font-medium leading-relaxed mb-12">
+                <p className="text-white text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed mb-12 drop-shadow-md">
                     Srikara Logistics — powering corporate mobility across the technological landscape of Hyderabad.
                 </p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
