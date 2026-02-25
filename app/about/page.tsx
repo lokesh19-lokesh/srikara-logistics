@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSmall from "@/components/HeroSmall";
+import Footer from "@/components/Footer";
 
 export default function About() {
     const values = [
@@ -44,20 +45,7 @@ export default function About() {
                 </div>
             </section>
 
-            <footer className="relative z-30 bg-black border-t border-white/5 py-12 px-10 text-center">
-                <div className="flex flex-col items-center gap-6">
-                    <div className="mb-4 relative h-12 w-48 mx-auto">
-                        <img
-                            src="/logo.jpg"
-                            alt="Srikara Logistics"
-                            className="h-full w-full object-contain filter grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-                        />
-                    </div>
-                    <div className="text-white/40 text-[10px] font-bold tracking-widest uppercase">
-                        Srikara Logistics © 2026. All Rights Reserved.
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </main>
     );
 }
