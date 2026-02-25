@@ -20,7 +20,7 @@ export default function Home() {
       <PartnerSlider />
 
       {/* Footer / Final Section */}
-      <footer className="relative z-30 bg-black border-t border-white/5 py-12 px-10 text-center">
+      <footer className="relative z-40 bg-black border-t border-white/5 py-12 px-10 text-center">
         <div className="flex flex-col items-center gap-6">
           <div className="mb-4 relative h-12 w-48">
             <img
