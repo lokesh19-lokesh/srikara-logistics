@@ -68,7 +68,7 @@ const Navbar = () => {
                 {/* Right: CTA & Mobile Toggle */}
                 <div className="flex items-center gap-4 z-[60]">
                     <Link
-                        href="#"
+                        href="/contact"
                         className="hidden sm:block bg-white text-black px-5 py-2 rounded-full text-xs font-bold tracking-tight hover:bg-white/90 transition-all active:scale-95"
                     >
                         Request Proposal

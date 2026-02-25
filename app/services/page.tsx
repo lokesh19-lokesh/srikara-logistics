@@ -4,6 +4,7 @@ import HeroSmall from "@/components/HeroSmall";
 import Footer from "@/components/Footer";
 import { Truck, Users, ShieldCheck, Clock } from "lucide-react";
 import Script from "next/script";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Corporate Transport Services",
@@ -80,7 +81,7 @@ export default function Services() {
                 <div className="mt-24 p-12 rounded-3xl bg-gradient-to-r from-corporate/20 to-cyan/10 border border-white/10 text-center">
                     <h3 className="text-white font-bold text-2xl mb-4 italic">Need a custom logistics plan?</h3>
                     <p className="text-white/60 mb-8 max-w-xl mx-auto">Our experts will design a mobility ecosystem tailored specifically to your organization's unique requirements.</p>
-                    <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-sm tracking-tight hover:bg-white/90 transition-all">Get in Touch</button>
+                    <Link href="/contact" className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold text-sm tracking-tight hover:bg-white/90 transition-all">Get in Touch</Link>
                 </div>
             </section>
 

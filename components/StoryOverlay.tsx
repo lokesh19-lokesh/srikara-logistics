@@ -4,6 +4,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ChevronRight, Shield, Users, Truck, Activity } from "lucide-react";
+import Link from "next/link";
 
 interface SectionProps {
     children: React.ReactNode;
@@ -146,13 +147,13 @@ const StoryOverlay = () => {
                     Srikara Logistics — powering corporate mobility across the technological landscape of Hyderabad.
                 </p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                    <button className="bg-corporate text-white px-10 py-5 rounded-full text-sm font-bold tracking-tight hover:bg-corporate/80 transition-all active:scale-95 flex items-center gap-2 group pointer-events-auto">
+                    <Link href="/contact" className="bg-corporate text-white px-10 py-5 rounded-full text-sm font-bold tracking-tight hover:bg-corporate/80 transition-all active:scale-95 flex items-center gap-2 group pointer-events-auto">
                         Request Corporate Proposal
                         <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-full text-sm font-bold tracking-tight hover:bg-white/10 transition-all pointer-events-auto">
+                    </Link>
+                    <Link href="/contact" className="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-full text-sm font-bold tracking-tight hover:bg-white/10 transition-all pointer-events-auto">
                         Contact Our Team
-                    </button>
+                    </Link>
                 </div>
             </Section>
 
