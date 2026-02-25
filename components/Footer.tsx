@@ -1,11 +1,78 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const BubbleLink = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    const bubbles = Array.from({ length: 12 });
+
+    return (
+        <a
+            href="https://thebubblesmedia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block group ml-1"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <span className="relative z-10 transition-all duration-300 group-hover:text-white group-hover:tracking-wider">The Bubbles Media</span>
+
+            {/* Bubbles Container */}
+            <div className="absolute inset-x-0 -top-20 bottom-0 pointer-events-none">
+                {isMounted && isHovered && bubbles.map((_, i) => {
+                    // Use deterministic "random" values based on index to avoid hydration mismatch
+                    const leftPos = 10 + (i * 137) % 80;
+                    const xDrift = (i % 2 === 0 ? 1 : -1) * (20 + (i * 31) % 40);
+                    const delay = i * 0.1;
+                    const duration = 2 + (i % 5) * 0.2;
+
+                    return (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20, x: 0, scale: 0 }}
+                            animate={{
+                                opacity: [0, 1, 0.8, 0],
+                                y: [20, -20, -50, -100],
+                                x: [0, xDrift * 0.5, xDrift, xDrift * 1.2],
+                                scale: [0, 1, 1.2, 0.5]
+                            }}
+                            transition={{
+                                duration: duration,
+                                repeat: Infinity,
+                                delay: delay,
+                                ease: "easeOut"
+                            }}
+                            className="absolute bottom-0 w-2 h-2 rounded-full border border-white/30 bg-white/5"
+                            style={{
+                                left: `${leftPos}%`,
+                            }}
+                        />
+                    );
+                })}
+            </div>
+
+            {/* Animated Underline */}
+            <span className="absolute -bottom-0.5 left-0 w-full h-[1px] bg-white/10 origin-left scale-x-100 group-hover:bg-corporate group-hover:scale-x-110 transition-all duration-500"></span>
+        </a>
+    );
+};
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const currentYear = mounted ? new Date().getFullYear() : 2026;
 
     const quickLinks = [
         { name: "Home", href: "/" },
@@ -106,7 +173,7 @@ const Footer = () => {
                             </li>
                             <li className="flex gap-3 text-white/40 text-sm">
                                 <Phone size={18} className="text-corporate shrink-0" />
-                                <span>+91 99999 99999</span>
+                                <span>+91 9121111000</span>
                             </li>
                             <li className="flex gap-3 text-white/40 text-sm">
                                 <Mail size={18} className="text-corporate shrink-0" />
@@ -118,13 +185,11 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-white/20 text-[10px] font-bold tracking-widest uppercase">
+                    <div className="text-white/20 text-[10px] font-bold tracking-widest uppercase text-center md:text-left">
                         Srikara Logistics © {currentYear}. All Rights Reserved.
                     </div>
-                    <div className="flex items-center gap-8 text-white/20 text-[10px] font-bold tracking-widest uppercase">
-                        <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                        <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
+                    <div className="text-white/20 text-[10px] font-bold tracking-widest uppercase flex items-center">
+                        Designed by <BubbleLink />
                     </div>
                 </div>
             </div>
