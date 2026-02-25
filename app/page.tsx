@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSequence from "@/components/HeroSequence";
 import StoryOverlay from "@/components/StoryOverlay";
+import PartnerSlider from "@/components/PartnerSlider";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       {/* Main Experience */}
       <HeroSequence />
       <StoryOverlay />
+
+      <PartnerSlider />
 
       {/* Footer / Final Section */}
       <footer className="relative z-30 bg-black border-t border-white/5 py-12 px-10 text-center">
