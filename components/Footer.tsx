@@ -24,7 +24,7 @@ const BubbleLink = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <span className="relative z-10 transition-all duration-300 group-hover:text-white group-hover:tracking-wider">The Bubbles Media</span>
+            <span className="relative z-10 transition-all duration-300 group-hover:text-corporate group-hover:tracking-wider">The Bubbles Media</span>
 
             {/* Bubbles Container */}
             <div className="absolute inset-x-0 -top-20 bottom-0 pointer-events-none">
@@ -51,7 +51,7 @@ const BubbleLink = () => {
                                 delay: delay,
                                 ease: "easeOut"
                             }}
-                            className="absolute bottom-0 w-2 h-2 rounded-full border border-white/30 bg-white/5"
+                            className="absolute bottom-0 w-2 h-2 rounded-full border border-black/20 bg-corporate/10"
                             style={{
                                 left: `${leftPos}%`,
                             }}
@@ -61,7 +61,7 @@ const BubbleLink = () => {
             </div>
 
             {/* Animated Underline */}
-            <span className="absolute -bottom-0.5 left-0 w-full h-[1px] bg-white/10 origin-left scale-x-100 group-hover:bg-corporate group-hover:scale-x-110 transition-all duration-500"></span>
+            <span className="absolute -bottom-0.5 left-0 w-full h-[1px] bg-black/10 origin-left scale-x-100 group-hover:bg-corporate group-hover:scale-x-110 transition-all duration-500"></span>
         </a>
     );
 };
@@ -133,7 +133,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative z-40 bg-black text-white pt-20 pb-10 border-t border-white/5">
+        <footer className="relative z-40 bg-[#f0f2f5] text-black pt-20 pb-10 border-t border-black/10">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Company Bio */}
@@ -143,11 +143,11 @@ const Footer = () => {
                                 <img
                                     src="/logo.jpg"
                                     alt="Srikara Logistics"
-                                    className="h-full w-full object-contain filter brightness-110"
+                                    className="h-full w-full object-contain"
                                 />
                             </div>
                         </Link>
-                        <p className="text-white/40 text-sm leading-relaxed max-w-xs">
+                        <p className="text-black/50 text-sm leading-relaxed max-w-xs">
                             A decade of excellence in corporate mobility. We provide seamless, safe, and sophisticated logistics solutions across India's technological hubs.
                         </p>
                         <div className="flex items-center gap-4">
@@ -155,7 +155,7 @@ const Footer = () => {
                                 <a
                                     key={social.name}
                                     href={social.href}
-                                    className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/5 flex items-center justify-center text-white/40 hover:bg-corporate hover:text-white transition-all active:scale-95 group"
+                                    className="w-10 h-10 rounded-full bg-black/[0.04] border border-black/10 flex items-center justify-center text-black/40 hover:bg-corporate hover:text-white hover:border-corporate transition-all active:scale-95 group"
                                     aria-label={social.name}
                                 >
                                     <div className="group-hover:scale-110 transition-transform">
@@ -170,13 +170,13 @@ const Footer = () => {
                     <div className="lg:col-span-2 grid grid-cols-2 gap-8 lg:contents">
                         {/* Quick Links */}
                         <div>
-                            <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Navigation</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-black/70">Navigation</h3>
                             <ul className="space-y-4">
                                 {quickLinks.map((link) => (
                                     <li key={link.name}>
                                         <Link
                                             href={link.href}
-                                            className="text-white/40 hover:text-corporate text-sm transition-colors"
+                                            className="text-black/50 hover:text-corporate text-sm transition-colors"
                                         >
                                             {link.name}
                                         </Link>
@@ -187,13 +187,13 @@ const Footer = () => {
 
                         {/* Services */}
                         <div>
-                            <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Our Services</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-black/70">Our Services</h3>
                             <ul className="space-y-4">
                                 {services.map((service) => (
                                     <li key={service.name}>
                                         <Link
                                             href={service.href}
-                                            className="text-white/40 hover:text-corporate text-sm transition-colors"
+                                            className="text-black/50 hover:text-corporate text-sm transition-colors"
                                         >
                                             {service.name}
                                         </Link>
@@ -205,9 +205,9 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Get in Touch</h3>
+                        <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-black/70">Get in Touch</h3>
                         <ul className="space-y-4">
-                            <li className="flex gap-3 text-white/40 text-sm">
+                            <li className="flex gap-3 text-black/50 text-sm">
                                 <MapPin size={18} className="text-corporate shrink-0" />
                                 <span className="max-w-[200px] leading-relaxed">
                                     Plot no 112, TNGOS Colony, <br />
@@ -215,11 +215,11 @@ const Footer = () => {
                                     Behind Q-city, Nankramguda.
                                 </span>
                             </li>
-                            <li className="flex gap-3 text-white/40 text-sm">
+                            <li className="flex gap-3 text-black/50 text-sm">
                                 <Phone size={18} className="text-corporate shrink-0" />
                                 <span>+91 88979 25656</span>
                             </li>
-                            <li className="flex gap-3 text-white/40 text-sm">
+                            <li className="flex gap-3 text-black/50 text-sm">
                                 <Mail size={18} className="text-corporate shrink-0" />
                                 <span>info@srikaralogistics.com</span>
                             </li>
@@ -228,11 +228,11 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-white/20 text-[10px] font-bold tracking-widest uppercase text-center md:text-left">
+                <div className="pt-10 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="text-black/30 text-[10px] font-bold tracking-widest uppercase text-center md:text-left">
                         Srikara Logistics © {currentYear}. All Rights Reserved.
                     </div>
-                    <div className="text-white/20 text-[10px] font-bold tracking-widest uppercase flex items-center">
+                    <div className="text-black/30 text-[10px] font-bold tracking-widest uppercase flex items-center">
                         Designed by <BubbleLink />
                     </div>
                 </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Gallery() {
     return (
-        <main className="bg-[#050505] min-h-screen">
+        <main className="bg-[#f8f9fa] min-h-screen">
             <Navbar />
             <HeroSmall title="Visual Showcase" subtitle="A glimpse into the engineering and scale of Srikara Logistics operations." />
 

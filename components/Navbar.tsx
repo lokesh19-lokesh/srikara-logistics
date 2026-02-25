@@ -31,7 +31,7 @@ const Navbar = () => {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out px-6 md:px-12 py-4",
                 isScrolled || isMobileMenuOpen
-                    ? "bg-black/80 backdrop-blur-2xl border-b border-white/10 py-3"
+                    ? "bg-white/90 backdrop-blur-2xl border-b border-black/10 py-3 shadow-sm"
                     : "bg-transparent py-5"
             )}
         >
@@ -46,7 +46,7 @@ const Navbar = () => {
                         <img
                             src="/logo.jpg"
                             alt="Srikara Logistics"
-                            className="h-full w-full object-contain filter brightness-110 contrast-110"
+                            className="h-full w-full object-contain"
                         />
                     </div>
                 </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-white/60 hover:text-white text-sm font-medium transition-colors relative group"
+                            className="text-black/60 hover:text-black text-sm font-medium transition-colors relative group"
                         >
                             {link.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-corporate transition-all duration-300 group-hover:w-full"></span>
@@ -69,14 +69,14 @@ const Navbar = () => {
                 <div className="flex items-center gap-4 z-[60]">
                     <Link
                         href="/contact"
-                        className="hidden sm:block bg-white text-black px-5 py-2 rounded-full text-xs font-bold tracking-tight hover:bg-white/90 transition-all active:scale-95"
+                        className="hidden sm:block bg-corporate text-white px-5 py-2 rounded-full text-xs font-bold tracking-tight hover:bg-corporate/80 transition-all active:scale-95"
                     >
                         Request Proposal
                     </Link>
 
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="p-2 text-white/80 hover:text-white md:hidden transition-all active:scale-90"
+                        className="p-2 text-black/80 hover:text-black md:hidden transition-all active:scale-90"
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -90,7 +90,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-3xl border-b border-white/10 overflow-hidden md:hidden pt-4 pb-12 px-8 flex flex-col gap-6"
+                        className="absolute top-full left-0 right-0 bg-white/98 backdrop-blur-3xl border-b border-black/10 shadow-lg overflow-hidden md:hidden pt-4 pb-12 px-8 flex flex-col gap-6"
                     >
                         {navLinks.map((link, i) => (
                             <motion.div
@@ -102,7 +102,7 @@ const Navbar = () => {
                                 <Link
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-2xl font-bold tracking-tighter text-white/80 hover:text-corporate transition-all"
+                                    className="text-2xl font-bold tracking-tighter text-black/80 hover:text-corporate transition-all"
                                 >
                                     {link.name}
                                 </Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="mt-4 pt-8 border-t border-white/5"
+                            className="mt-4 pt-8 border-t border-black/10"
                         >
                             <Link
                                 href="/contact"

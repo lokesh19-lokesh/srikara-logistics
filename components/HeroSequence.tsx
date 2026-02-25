@@ -108,7 +108,7 @@ const HeroSequence = ({ children }: { children?: React.ReactNode }) => {
     }, [images, frameIndex]);
 
     return (
-        <div ref={containerRef} className="relative h-[500vh] w-full bg-[#050505]">
+        <div ref={containerRef} className="relative h-[500vh] w-full bg-[#f8f9fa]">
             <div className="sticky top-0 left-0 w-full h-screen overflow-hidden">
                 <canvas
                     ref={canvasRef}
@@ -123,7 +123,7 @@ const HeroSequence = ({ children }: { children?: React.ReactNode }) => {
                 <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
-                        background: "radial-gradient(circle at center, transparent 20%, rgba(5, 5, 5, 0.6) 60%, rgba(5, 5, 5, 0.8) 85%, #050505 100%)"
+                        background: "radial-gradient(circle at center, transparent 20%, rgba(248, 249, 250, 0.5) 60%, rgba(248, 249, 250, 0.75) 85%, #f8f9fa 100%)"
                     }}
                 />
 

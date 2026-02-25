@@ -32,9 +32,9 @@ const Section = ({ children, className, progressRange, opacityRange = [0, 1, 0] 
         >
             <div className="max-w-4xl pointer-events-auto relative">
                 {/* Isolating Background Element */}
-                <div className="absolute -inset-10 bg-black/40 backdrop-blur-md rounded-[40px] -z-10 mask-radial-fade"></div>
+                <div className="absolute -inset-10 bg-white/70 backdrop-blur-md rounded-[40px] -z-10 mask-radial-fade"></div>
 
-                <div className="relative filter drop-shadow-[0_10px_20px_rgba(0,0,0,1)]">
+                <div className="relative filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.08)]">
                     {children}
                 </div>
             </div>
@@ -56,10 +56,10 @@ const StoryOverlay = () => {
                 >
                     Established 2012
                 </motion.span>
-                <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6">
+                <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-black mb-6">
                     SRIKARA <span className="text-corporate">LOGISTICS</span>
                 </h1>
-                <p className="text-white text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed drop-shadow-lg">
+                <p className="text-black/70 text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed">
                     Corporate mobility solutions engineered for reliability, safety, and scale at any magnitude.
                 </p>
             </Section>
@@ -70,15 +70,15 @@ const StoryOverlay = () => {
                     <div className="w-12 h-[1px] bg-corporate"></div>
                     <span className="text-corporate font-bold tracking-widest uppercase text-xs">Engineering of Service</span>
                 </div>
-                <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
+                <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-black mb-8 leading-[0.9]">
                     Built for reliability <br />
                     <span className="text-corporate">from the inside out.</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
-                    <p className="text-white text-lg leading-relaxed font-semibold drop-shadow-md">
+                    <p className="text-black/70 text-lg leading-relaxed font-semibold">
                         Every vehicle, driver, and route is part of a carefully engineered system designed for uninterrupted mobility.
                     </p>
-                    <p className="text-white text-lg leading-relaxed font-semibold drop-shadow-md">
+                    <p className="text-black/70 text-lg leading-relaxed font-semibold">
                         From scheduling to precision maintenance, our operations ensure your workforce moves without friction.
                     </p>
                 </div>
@@ -90,9 +90,9 @@ const StoryOverlay = () => {
                     <span className="text-cyan font-bold tracking-widest uppercase text-xs">Uncompromising Standards</span>
                     <div className="w-12 h-[1px] bg-cyan"></div>
                 </div>
-                <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
-                    Safety isn’t a feature. <br />
-                    <span className="text-cyan">It’s our foundation.</span>
+                <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-black mb-8 leading-[0.9]">
+                    Safety isn't a feature. <br />
+                    <span className="text-cyan">It's our foundation.</span>
                 </h2>
                 <div className="flex flex-col gap-6 items-end">
                     {[
@@ -100,9 +100,9 @@ const StoryOverlay = () => {
                         { icon: Activity, text: "Continuous monitoring & compliance checks" },
                         { icon: Users, text: "Regular defensive driving programs" }
                     ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-4 text-white/80 group">
+                        <div key={i} className="flex items-center gap-4 text-black/70 group">
                             <span className="text-sm font-medium tracking-tight group-hover:text-cyan transition-colors">{item.text}</span>
-                            <div className="p-2 rounded-full bg-white/5 border border-white/10 group-hover:border-cyan/50 transition-all">
+                            <div className="p-2 rounded-full bg-black/5 border border-black/10 group-hover:border-cyan/50 transition-all">
                                 <item.icon size={18} className="text-cyan" />
                             </div>
                         </div>
@@ -113,37 +113,37 @@ const StoryOverlay = () => {
             {/* 4. FLEET ECOSYSTEM (60-80%) */}
             <Section progressRange={[0.6, 0.85]} className="items-center text-center">
                 <div className="flex items-center gap-3 mb-6 justify-center">
-                    <div className="w-8 h-[1px] bg-white/20"></div>
-                    <span className="text-white/40 font-bold tracking-widest uppercase text-xs">The Network</span>
-                    <div className="w-8 h-[1px] bg-white/20"></div>
+                    <div className="w-8 h-[1px] bg-black/20"></div>
+                    <span className="text-black/40 font-bold tracking-widest uppercase text-xs">The Network</span>
+                    <div className="w-8 h-[1px] bg-black/20"></div>
                 </div>
-                <h2 className="text-5xl md:text-8xl font-black tracking-tighter text-white mb-10 leading-[0.85]">
+                <h2 className="text-5xl md:text-8xl font-black tracking-tighter text-black mb-10 leading-[0.85]">
                     A fleet that moves <br />
                     <span className="text-corporate">with your business.</span>
                 </h2>
-                <div className="flex flex-wrap justify-center gap-12 text-white">
+                <div className="flex flex-wrap justify-center gap-12 text-black">
                     <div className="text-center">
                         <div className="text-4xl font-bold tracking-tighter mb-1">330+</div>
-                        <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Premium Vehicles</div>
+                        <div className="text-[10px] uppercase tracking-widest text-black/40 font-bold">Premium Vehicles</div>
                     </div>
                     <div className="text-center">
                         <div className="text-4xl font-bold tracking-tighter mb-1">24/7</div>
-                        <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Command Center</div>
+                        <div className="text-[10px] uppercase tracking-widest text-black/40 font-bold">Command Center</div>
                     </div>
                     <div className="text-center">
                         <div className="text-4xl font-bold tracking-tighter mb-1">100%</div>
-                        <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Backup Systems</div>
+                        <div className="text-[10px] uppercase tracking-widest text-black/40 font-bold">Backup Systems</div>
                     </div>
                 </div>
             </Section>
 
             {/* 5. FINAL REASSEMBLY + CTA (85-100%) */}
             <Section progressRange={[0.85, 1]} opacityRange={[0, 1, 1]} className="items-center text-center">
-                <h2 className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8 leading-[0.85]">
+                <h2 className="text-6xl md:text-8xl font-black tracking-tighter text-black mb-8 leading-[0.85]">
                     Reliable journeys. <br />
-                    <span className="text-white/30">Trusted partnerships.</span>
+                    <span className="text-black/30">Trusted partnerships.</span>
                 </h2>
-                <p className="text-white text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed mb-12 drop-shadow-md">
+                <p className="text-black/70 text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed mb-12">
                     Srikara Logistics — powering corporate mobility across the technological landscape of Hyderabad.
                 </p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
@@ -151,7 +151,7 @@ const StoryOverlay = () => {
                         Request Corporate Proposal
                         <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
-                    <Link href="/contact" className="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-full text-sm font-bold tracking-tight hover:bg-white/10 transition-all pointer-events-auto">
+                    <Link href="/contact" className="bg-black/5 border border-black/15 text-black px-10 py-5 rounded-full text-sm font-bold tracking-tight hover:bg-black/10 transition-all pointer-events-auto">
                         Contact Our Team
                     </Link>
                 </div>

@@ -54,7 +54,7 @@ export default function Services() {
     };
 
     return (
-        <main className="bg-[#050505] min-h-screen">
+        <main className="bg-[#f8f9fa] min-h-screen">
             <Script
                 id="services-schema"
                 type="application/ld+json"
@@ -66,22 +66,22 @@ export default function Services() {
             <section className="max-w-7xl mx-auto px-6 py-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {services.map((s, i) => (
-                        <div key={i} className="p-10 rounded-3xl bg-white/5 border border-white/10 flex flex-col items-start hover:bg-white/[0.07] transition-all group">
+                        <div key={i} className="p-10 rounded-3xl bg-white border border-black/10 flex flex-col items-start hover:border-corporate/40 transition-all group shadow-sm">
                             <div className="p-4 rounded-2xl bg-corporate/10 border border-corporate/20 text-corporate mb-8 group-hover:scale-110 transition-transform">
                                 <s.icon size={32} />
                             </div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 italic tracking-tight drop-shadow-md">{s.title}</h2>
-                            <p className="text-white/80 text-lg leading-relaxed max-w-lg drop-shadow-sm">
+                            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 italic tracking-tight">{s.title}</h2>
+                            <p className="text-black/60 text-lg leading-relaxed max-w-lg">
                                 {s.description}
                             </p>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-24 p-12 rounded-3xl bg-gradient-to-r from-corporate/20 to-cyan/10 border border-white/10 text-center">
-                    <h3 className="text-white font-bold text-2xl mb-4 italic">Need a custom logistics plan?</h3>
-                    <p className="text-white/60 mb-8 max-w-xl mx-auto">Our experts will design a mobility ecosystem tailored specifically to your organization's unique requirements.</p>
-                    <Link href="/contact" className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold text-sm tracking-tight hover:bg-white/90 transition-all">Get in Touch</Link>
+                <div className="mt-24 p-12 rounded-3xl bg-gradient-to-r from-corporate/10 to-cyan/10 border border-corporate/20 text-center">
+                    <h3 className="text-black font-bold text-2xl mb-4 italic">Need a custom logistics plan?</h3>
+                    <p className="text-black/60 mb-8 max-w-xl mx-auto">Our experts will design a mobility ecosystem tailored specifically to your organization's unique requirements.</p>
+                    <Link href="/contact" className="inline-block bg-corporate text-white px-8 py-4 rounded-full font-bold text-sm tracking-tight hover:bg-corporate/80 transition-all">Get in Touch</Link>
                 </div>
             </section>
 
