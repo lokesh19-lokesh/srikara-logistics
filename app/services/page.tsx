@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSmall from "@/components/HeroSmall";
 import Footer from "@/components/Footer";
 import { Truck, Users, ShieldCheck, Clock } from "lucide-react";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+    title: "Corporate Transport Services",
+    description: "Comprehensive mobility solutions including Employee Transportation, Premium Car Rentals, and Tour & Travels for modern enterprises.",
+};
 
 export default function Services() {
     const services = [
@@ -27,8 +34,31 @@ export default function Services() {
         }
     ];
 
+    const servicesSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": services.map((s, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "item": {
+                "@type": "Service",
+                "name": s.title,
+                "description": s.description,
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Srikara Logistics"
+                }
+            }
+        }))
+    };
+
     return (
         <main className="bg-[#050505] min-h-screen">
+            <Script
+                id="services-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+            />
             <Navbar />
             <HeroSmall title="Our Services" subtitle="Integrated mobility solutions designed for the modern enterprise." />
 

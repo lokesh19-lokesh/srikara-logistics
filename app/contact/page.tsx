@@ -1,11 +1,46 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSmall from "@/components/HeroSmall";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+    title: "Contact Us & Location",
+    description: "Get in touch with Srikara Logistics headquarters in Nankramguda. Find our contact details for corporate transport and logistics inquiries.",
+};
 
 export default function Contact() {
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Srikara Logistics",
+        "image": "https://srikaralogistics.com/logo.jpg",
+        "telephone": "+91-88979-25656",
+        "email": "info@srikaralogistics.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plot no 112, TNGOS Colony, Behind Q-city, Nankramguda",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500032",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "17.4191",
+            "longitude": "78.3444"
+        },
+        "url": "https://srikaralogistics.com/contact"
+    };
+
     return (
         <main className="bg-[#050505] min-h-screen">
+            <Script
+                id="contact-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+            />
             <Navbar />
             <HeroSmall title="Let's Connect" subtitle="Elevate your corporate mobility standards. Our team is ready to design your ideal logistics ecosystem." />
 

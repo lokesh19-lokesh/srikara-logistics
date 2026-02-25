@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSmall from "@/components/HeroSmall";
 import Footer from "@/components/Footer";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+    title: "About Our Logistics Excellence",
+    description: "Discover the history and mission of Srikara Logistics. Providing reliable corporate transport and mobility solutions in Hyderabad since 2012.",
+};
 
 export default function About() {
     const values = [
@@ -10,8 +17,28 @@ export default function About() {
         { title: "Excellence", description: "Striving for perfection in every journey, every day." }
     ];
 
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "description": "Information about Srikara Logistics, a corporate mobility leader in Hyderabad.",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Srikara Logistics",
+            "foundingDate": "2012",
+            "location": {
+                "@type": "Place",
+                "address": "Plot no 112, TNGOS Colony, Nankramguda, Hyderabad"
+            }
+        }
+    };
+
     return (
         <main className="bg-[#050505] min-h-screen">
+            <Script
+                id="about-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+            />
             <Navbar />
             <HeroSmall title="About Us" subtitle="Commitment to Excellence. Corporate mobility solutions engineered for reliability, safety, and scale." />
 
