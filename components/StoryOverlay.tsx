@@ -29,8 +29,13 @@ const Section = ({ children, className, progressRange, opacityRange = [0, 1, 0] 
             style={{ opacity, y }}
             className={cn("absolute inset-0 flex flex-col justify-center px-10 md:px-24 pointer-events-none", className)}
         >
-            <div className="max-w-4xl pointer-events-auto filter drop-shadow-[0_10px_20px_rgba(0,0,0,1)]">
-                {children}
+            <div className="max-w-4xl pointer-events-auto relative">
+                {/* Isolating Background Element */}
+                <div className="absolute -inset-10 bg-black/40 backdrop-blur-md rounded-[40px] -z-10 mask-radial-fade"></div>
+
+                <div className="relative filter drop-shadow-[0_10px_20px_rgba(0,0,0,1)]">
+                    {children}
+                </div>
             </div>
         </motion.div>
     );
@@ -51,7 +56,7 @@ const StoryOverlay = () => {
                     Established 2012
                 </motion.span>
                 <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6">
-                    SRIKARA <span className="text-white/20">LOGISTICS</span>
+                    SRIKARA <span className="text-corporate">LOGISTICS</span>
                 </h1>
                 <p className="text-white text-lg md:text-xl max-w-xl mx-auto font-bold leading-relaxed drop-shadow-lg">
                     Corporate mobility solutions engineered for reliability, safety, and scale at any magnitude.
@@ -66,7 +71,7 @@ const StoryOverlay = () => {
                 </div>
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
                     Built for reliability <br />
-                    <span className="text-white/30">from the inside out.</span>
+                    <span className="text-corporate">from the inside out.</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
                     <p className="text-white text-lg leading-relaxed font-semibold drop-shadow-md">
@@ -86,7 +91,7 @@ const StoryOverlay = () => {
                 </div>
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[0.9]">
                     Safety isn’t a feature. <br />
-                    <span className="text-white/30">It’s our foundation.</span>
+                    <span className="text-cyan">It’s our foundation.</span>
                 </h2>
                 <div className="flex flex-col gap-6 items-end">
                     {[

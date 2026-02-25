@@ -123,7 +123,7 @@ const HeroSequence = () => {
                 <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
-                        background: "radial-gradient(circle at center, transparent 30%, rgba(5, 5, 5, 0.4) 70%, #050505 100%)"
+                        background: "radial-gradient(circle at center, transparent 20%, rgba(5, 5, 5, 0.6) 60%, rgba(5, 5, 5, 0.8) 85%, #050505 100%)"
                     }}
                 />
 
