@@ -14,8 +14,9 @@ export default function Home() {
       </div>
 
       {/* Main Experience */}
-      <HeroSequence />
-      <StoryOverlay />
+      <HeroSequence>
+        <StoryOverlay />
+      </HeroSequence>
 
       <PartnerSlider />
 

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 
-const HeroSequence = () => {
+const HeroSequence = ({ children }: { children?: React.ReactNode }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [images, setImages] = useState<HTMLImageElement[]>([]);
@@ -126,6 +126,9 @@ const HeroSequence = () => {
                         background: "radial-gradient(circle at center, transparent 20%, rgba(5, 5, 5, 0.6) 60%, rgba(5, 5, 5, 0.8) 85%, #050505 100%)"
                     }}
                 />
+
+                {/* Content Overlay - Scales/Scrolls with Sticky Container */}
+                {children}
 
                 {/* Loading State */}
                 {!isLoaded && (

@@ -43,7 +43,7 @@ const Section = ({ children, className, progressRange, opacityRange = [0, 1, 0] 
 
 const StoryOverlay = () => {
     return (
-        <div className="fixed inset-0 pointer-events-none z-40">
+        <div className="absolute inset-0 pointer-events-none z-40">
 
             {/* 1. HERO INTRO (0-15%) */}
             <Section progressRange={[0, 0.15]} className="items-center text-center">
