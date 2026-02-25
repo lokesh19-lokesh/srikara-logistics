@@ -172,11 +172,15 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex gap-3 text-white/40 text-sm">
                                 <MapPin size={18} className="text-corporate shrink-0" />
-                                <span>Hyderabad, Telangana, India</span>
+                                <span className="max-w-[200px] leading-relaxed">
+                                    Plot no 112, TNGOS Colony, <br />
+                                    My Home Vihanga Road, <br />
+                                    Behind Q-city, Nankramguda.
+                                </span>
                             </li>
                             <li className="flex gap-3 text-white/40 text-sm">
                                 <Phone size={18} className="text-corporate shrink-0" />
-                                <span>+91 9121111000</span>
+                                <span>+91 88979 25656</span>
                             </li>
                             <li className="flex gap-3 text-white/40 text-sm">
                                 <Mail size={18} className="text-corporate shrink-0" />

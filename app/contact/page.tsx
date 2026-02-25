@@ -25,8 +25,9 @@ export default function Contact() {
                                 <div>
                                     <h3 className="text-white font-bold mb-2 drop-shadow-sm">Location</h3>
                                     <p className="text-white/80 leading-relaxed drop-shadow-sm">
-                                        Srikara Logistics, Madhapur, <br />
-                                        Hyderabad, Telangana 500081
+                                        Plot no 112, TNGOS Colony, <br />
+                                        My Home Vihanga Road, <br />
+                                        Behind Q-city, Nankramguda.
                                     </p>
                                 </div>
                             </div>
@@ -37,8 +38,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="text-white font-bold mb-2 drop-shadow-sm">Connect</h3>
-                                    <p className="text-white/80 drop-shadow-sm">+91 40 1234 5678</p>
-                                    <p className="text-white/80 drop-shadow-sm">+91 99887 76655</p>
+                                    <p className="text-white/80 drop-shadow-sm">+91 88979 25656</p>
                                 </div>
                             </div>
 
