@@ -88,6 +88,21 @@ export default function Contact() {
                         </form>
                     </div>
                 </div>
+
+                {/* Interactive Map */}
+                <div className="mt-24 rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 h-[400px] md:h-[500px] relative group">
+                    <div className="absolute inset-0 bg-corporate/5 pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-700"></div>
+                    <iframe
+                        src="https://www.google.com/maps?q=Plot+no+112,TNGOS+Colony,My+Home+Vihanga+Road,Behind+Q-city,Nankramguda&output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="relative z-0 opacity-60 group-hover:opacity-100 group-hover:filter-none transition-all duration-700"
+                    ></iframe>
+                </div>
             </section>
 
             <Footer />
