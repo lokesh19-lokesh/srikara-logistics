@@ -48,8 +48,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="text-white font-bold mb-2 drop-shadow-sm">Inquiries</h3>
-                                    <p className="text-white/80 drop-shadow-sm">solutions@srikaralogistics.com</p>
-                                    <p className="text-white/80 drop-shadow-sm">partners@srikaralogistics.com</p>
+                                    <p className="text-white/80 drop-shadow-sm">info@srikaralogistics.com</p>
                                 </div>
                             </div>
                         </div>
