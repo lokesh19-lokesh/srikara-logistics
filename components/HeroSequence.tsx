@@ -129,27 +129,6 @@ const HeroSequence = ({ children }: { children?: React.ReactNode }) => {
 
                 {/* Content Overlay - Scales/Scrolls with Sticky Container */}
                 {children}
-
-                {/* Loading State */}
-                {!isLoaded && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#050505] z-10">
-                        <motion.div
-                            animate={{ opacity: [0.4, 1, 0.4] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                            className="text-white/40 text-xs font-bold tracking-widest uppercase mb-4"
-                        >
-                            Initializing Experience
-                        </motion.div>
-                        <div className="w-48 h-[1px] bg-white/10 relative overflow-hidden">
-                            <motion.div
-                                initial={{ x: "-100%" }}
-                                animate={{ x: "0%" }}
-                                className="absolute inset-0 bg-corporate"
-                                style={{ scaleX: images.length / frameCount }}
-                            />
-                        </div>
-                    </div>
-                )}
             </div>
         </div>
     );
