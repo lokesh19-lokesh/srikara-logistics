@@ -129,38 +129,41 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Navigation</h3>
-                        <ul className="space-y-4">
-                            {quickLinks.map((link) => (
-                                <li key={link.name}>
-                                    <Link
-                                        href={link.href}
-                                        className="text-white/40 hover:text-corporate text-sm transition-colors"
-                                    >
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Middle Section: Links Grid */}
+                    <div className="lg:col-span-2 grid grid-cols-2 gap-8 lg:contents">
+                        {/* Quick Links */}
+                        <div>
+                            <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Navigation</h3>
+                            <ul className="space-y-4">
+                                {quickLinks.map((link) => (
+                                    <li key={link.name}>
+                                        <Link
+                                            href={link.href}
+                                            className="text-white/40 hover:text-corporate text-sm transition-colors"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                    {/* Services */}
-                    <div>
-                        <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Our Services</h3>
-                        <ul className="space-y-4">
-                            {services.map((service) => (
-                                <li key={service.name}>
-                                    <Link
-                                        href={service.href}
-                                        className="text-white/40 hover:text-corporate text-sm transition-colors"
-                                    >
-                                        {service.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                        {/* Services */}
+                        <div>
+                            <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/80">Our Services</h3>
+                            <ul className="space-y-4">
+                                {services.map((service) => (
+                                    <li key={service.name}>
+                                        <Link
+                                            href={service.href}
+                                            className="text-white/40 hover:text-corporate text-sm transition-colors"
+                                        >
+                                            {service.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Contact Info */}
