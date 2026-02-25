@@ -7,23 +7,23 @@ export default function Services() {
     const services = [
         {
             icon: Users,
-            title: "Employee Transport",
-            description: "Scalable, punctual, and safe daily transportation solutions for your workforce across Hyderabad."
+            title: "Employee Transportation",
+            description: "Scalable, punctual, and safe daily transportation solutions for your workforce across India's tech hubs."
         },
         {
             icon: Truck,
-            title: "Fleet Management",
-            description: "Comprehensive management of transport assets including maintenance, tracking, and optimization."
+            title: "Car Rental",
+            description: "Premium corporate car rental services with a diverse fleet of well-maintained vehicles and professional chauffeurs."
         },
         {
             icon: ShieldCheck,
-            title: "Executive Travel",
-            description: "Premium, discreet, and luxury mobility for corporate leaders and visiting delegates."
+            title: "Tour & Travels",
+            description: "Curated travel experiences and logistics for corporate groups, events, and leisure trips."
         },
         {
             icon: Clock,
-            title: "24/7 Logistics Support",
-            description: "Our command center never sleeps, ensuring round-the-clock monitoring and support for all operations."
+            title: "Corporate Logistics",
+            description: "End-to-end management of complex logistics requirements, ensuring efficiency and reliability at every step."
         }
     ];
 

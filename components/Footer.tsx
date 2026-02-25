@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter as XLogo, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BubbleLink = () => {
@@ -83,18 +83,53 @@ const Footer = () => {
     ];
 
     const services = [
-        { name: "Corporate Cab Services", href: "/services" },
-        { name: "Crew Management", href: "/services" },
-        { name: "Buses & Coaches", href: "/services" },
-        { name: "Event Logistics", href: "/services" },
-        { name: "Luxury Rentals", href: "/services" },
+        { name: "Employee Transportation", href: "/services" },
+        { name: "Car Rental", href: "/services" },
+        { name: "Tour & Travels", href: "/services" },
+        { name: "Corporate Logistics", href: "/services" },
+        { name: "Executive Mobility", href: "/services" },
     ];
 
     const socialLinks = [
-        { name: "Facebook", icon: <Facebook size={20} />, href: "#" },
-        { name: "Instagram", icon: <Instagram size={20} />, href: "#" },
-        { name: "Twitter", icon: <Twitter size={20} />, href: "#" },
-        { name: "Youtube", icon: <Youtube size={20} />, href: "#" },
+        {
+            name: "Facebook",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+            ),
+            href: "#"
+        },
+        {
+            name: "Instagram",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+            ),
+            href: "#"
+        },
+        {
+            name: "X",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 1200 1227">
+                    <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.391L658.88 583.285L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                </svg>
+            ),
+            href: "#"
+        },
+        {
+            name: "Youtube",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z" />
+                    <path d="m10 15 5-3-5-3z" />
+                </svg>
+            ),
+            href: "#"
+        },
     ];
 
     return (
@@ -120,10 +155,12 @@ const Footer = () => {
                                 <a
                                     key={social.name}
                                     href={social.href}
-                                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:bg-corporate hover:text-white transition-all active:scale-90"
+                                    className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/5 flex items-center justify-center text-white/40 hover:bg-corporate hover:text-white transition-all active:scale-95 group"
                                     aria-label={social.name}
                                 >
-                                    {social.icon}
+                                    <div className="group-hover:scale-110 transition-transform">
+                                        {social.icon}
+                                    </div>
                                 </a>
                             ))}
                         </div>
