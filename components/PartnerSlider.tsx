@@ -42,7 +42,7 @@ const PartnerSlider = () => {
                     {duplicatedLogos.map((logo, index) => (
                         <div
                             key={index}
-                            className="w-32 md:w-40 flex-shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                            className="w-32 md:w-40 flex-shrink-0 transition-all duration-500 hover:scale-110"
                         >
                             <img
                                 src={logo}
