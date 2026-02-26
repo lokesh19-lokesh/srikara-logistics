@@ -141,7 +141,7 @@ const Footer = () => {
                         <Link href="/" className="block">
                             <div className="relative h-12 w-48">
                                 <img
-                                    src="/logo.jpg"
+                                    src="/assets/logo.png"
                                     alt="Srikara Logistics"
                                     className="h-full w-full object-contain"
                                 />

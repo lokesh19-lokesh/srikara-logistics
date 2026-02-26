@@ -15,7 +15,7 @@ export default function Contact() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Srikara Logistics",
-        "image": "https://srikaralogistics.com/logo.jpg",
+        "image": "https://srikaralogistics.com/assets/logo.png",
         "telephone": "+91-88979-25656",
         "email": "info@srikaralogistics.com",
         "address": {

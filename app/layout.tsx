@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://srikaralogistics.com",
     siteName: "Srikara Logistics",
     images: [{
-      url: "/logo.jpg",
+      url: "/assets/logo.png",
       width: 1200,
       height: 630,
       alt: "Srikara Logistics - Corporate Mobility Excellence"
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Srikara Logistics | Corporate Mobility & Excellence",
     description: "Premier corporate mobility solutions in Hyderabad. Reliable, safe, and scalable logistics.",
-    images: ["/logo.jpg"],
+    images: ["/assets/logo.png"],
   },
   robots: {
     index: true,
@@ -65,7 +65,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "Srikara Logistics",
     "url": "https://srikaralogistics.com",
-    "logo": "https://srikaralogistics.com/logo.jpg",
+    "logo": "https://srikaralogistics.com/assets/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-88979-25656",

@@ -44,7 +44,7 @@ const Navbar = () => {
                 >
                     <div className="relative h-10 w-40 overflow-hidden">
                         <img
-                            src="/logo.jpg"
+                            src="/assets/logo.png"
                             alt="Srikara Logistics"
                             className="h-full w-full object-contain"
                         />
