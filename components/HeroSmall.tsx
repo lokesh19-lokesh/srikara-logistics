@@ -10,7 +10,7 @@ interface HeroSmallProps {
 
 const HeroSmall = ({ title, subtitle }: HeroSmallProps) => {
     return (
-        <div className="relative h-[40vh] w-full bg-[#f0f2f5] flex items-center justify-center overflow-hidden border-b border-black/10">
+        <div className="relative min-h-[350px] h-[40vh] md:h-[45vh] w-full bg-[#f0f2f5] flex items-center justify-center overflow-hidden border-b border-black/10 pt-24 md:pt-32 pb-12">
             {/* Background Atmosphere */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,80,255,0.07)_0%,transparent_70%)]" />
