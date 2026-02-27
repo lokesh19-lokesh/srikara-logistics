@@ -24,7 +24,7 @@ const BubbleLink = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <span className="relative z-10 transition-all duration-300 group-hover:text-corporate group-hover:tracking-wider">The Bubbles Media</span>
+            <span className="relative z-10 transition-all duration-300 group-hover:text-white group-hover:tracking-wider">The Bubbles Media</span>
 
             {/* Bubbles Container */}
             <div className="absolute inset-x-0 -top-20 bottom-0 pointer-events-none">
@@ -51,7 +51,7 @@ const BubbleLink = () => {
                                 delay: delay,
                                 ease: "easeOut"
                             }}
-                            className="absolute bottom-0 w-2 h-2 rounded-full border border-black/20 bg-corporate/10"
+                            className="absolute bottom-0 w-2 h-2 rounded-full border border-white/20 bg-white/10"
                             style={{
                                 left: `${leftPos}%`,
                             }}
@@ -61,7 +61,7 @@ const BubbleLink = () => {
             </div>
 
             {/* Animated Underline */}
-            <span className="absolute -bottom-0.5 left-0 w-full h-[1px] bg-black/10 origin-left scale-x-100 group-hover:bg-corporate group-hover:scale-x-110 transition-all duration-500"></span>
+            <span className="absolute -bottom-0.5 left-0 w-full h-[1px] bg-white/10 origin-left scale-x-100 group-hover:bg-white group-hover:scale-x-110 transition-all duration-500"></span>
         </a>
     );
 };
@@ -133,9 +133,9 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative z-40 bg-[#f0f2f5] text-black pt-20 pb-10 border-t border-black/10">
-            <div className="max-w-7xl mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <footer className="relative z-40 bg-[#f0f2f5] text-black pt-20 border-t border-black/10">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 pb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Company Bio */}
                     <div className="space-y-6">
                         <Link href="/" className="block">
@@ -226,13 +226,15 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-10 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-black/30 text-[10px] font-bold tracking-widest uppercase text-center md:text-left">
+            {/* Bottom Bar */}
+            <div className="bg-corporate py-8">
+                <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="text-white/60 text-[10px] font-bold tracking-widest uppercase text-center md:text-left selection:bg-white selection:text-corporate">
                         Srikara Logistics © {currentYear}. All Rights Reserved.
                     </div>
-                    <div className="text-black/30 text-[10px] font-bold tracking-widest uppercase flex items-center">
+                    <div className="text-white/60 text-[10px] font-bold tracking-widest uppercase flex items-center selection:bg-white selection:text-corporate">
                         Designed by <BubbleLink />
                     </div>
                 </div>
