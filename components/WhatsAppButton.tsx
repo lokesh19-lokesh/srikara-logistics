@@ -13,7 +13,7 @@ const WhatsAppButton = () => {
             initial={{ opacity: 0, scale: 0, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="fixed bottom-8 right-8 z-[60]"
+            className="fixed bottom-17 right-8 z-[60]"
         >
             <a
                 href={whatsappUrl}
